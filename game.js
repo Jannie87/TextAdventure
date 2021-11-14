@@ -9,7 +9,7 @@
     const scopeTwo= prompt ("Please enter another flavor");
     alert("now you added " + scopeOne + " and " + scopeTwo + " to your cone");
    
-    const topping = prompt ("Now its time for topping, would you like M&M or rainbow sprinkles?")
+    const topping = prompt ("Now its time for topping, would you like Chocolate or Caramel?")
     alert("You choose " + topping)
     
     const iceCream = scopeOne + " and " +  scopeTwo + " topped with " + topping;

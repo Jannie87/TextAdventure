@@ -19,6 +19,21 @@ main {
 
 }
 
+button {
+    border-radius:2rem;
+    padding: 0.5rem 2rem;
+    border-style: none;
+    
+}
+
+button:hover {
+    box-shadow: 2px 2px black;
+}
+button:active{
+  background-color: grey;
+  color: whitesmoke;
+  font-weight: 600;
+}
 
 
 /* reusable classes */
