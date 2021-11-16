@@ -24,9 +24,10 @@
  * En funktion som startat själva spelet, där användaren få olika va.
  */
  function startStory() {
-    const answer = prompt ('Vill du börja ditt äventyr och gå till skogen? Skriv "ja eller nej"')
+    const answer = prompt ('Vill du börja ditt äventyr? Skriv "ja eller nej"')
 
       if (answer === 'ja') {
+         alert ("Du kommer nu att gå till en magisk skog")
          enterForest();
       } else if (answer === 'nej') {
          alert ('Spelet avslutas');
@@ -42,14 +43,14 @@
  * En funktion där användaren får göra ett val. Valet sparas sedan i en inventory.
  */
 function enterForest () {
-   alert ("Du har nu kommit in i skogen och skall hitta den magiska guldglassen. Framför dig har du tre föremål 'bägare, rån, våffla'");
-   const answer = prompt ("Plocka upp det föremål du vill ta med dig 'bägare, rån, våffla', Skriv namnet på föremålet");
+   alert ("Du har nu kommit in i den magiska skogen. Nu är det upp till dig att hitta den magiska guldglassen. Du hittar tre föremål: en bägare, ett rån och en våffla");
+   const answer = prompt ("Plocka upp ett utav föremålen som du vill ta med dig på din resa. 'Skriv: bägare, rån eller våffla'");
       if (answer === 'bägare' || answer === 'rån' || answer ==='våffla') {
          inventory.push(answer);
          console.log(answer);
          resumeGame ();
       } else {
-         alert ("Vänligen välj ett föremål");
+         alert ("Vänligen välj ett utav föremålen");
          enterForest();
       }
 }
@@ -57,20 +58,20 @@ function enterForest () {
  * En funktion där användaren får göra ett val. 
  */
 function resumeGame() {
-   alert("Du fortsätter in i skogen. Då hör du plötsligt steg bakom dig. Du vänder dig om och ser ett glassmonster komma emot dig. Glassmonstret kastar vaniljglass på dig");
-   const choice = prompt ("Du kan nu välja att använda ditt föremål och kasta glass på glassmonstret eller strö ut strössel eller kolasås, ' skriv in föremål, strössel eller kolasås'")
+   alert("Din resa fortsätter in i skogen. Plötsligt hör du ett prasslande ljud bakom dig. Du vänder dig om och ser ett glassmonster komma springandes emot dig. Glassmonstret kastar vaniljglass på dig");
+   const choice = prompt (" Vad gör du för att skydda dig? Du kan nu välja att använda ditt föremål och kasta glass på glassmonstret eller strö ut strössel eller kolasås, 'Skriv: föremål, strössel eller kolasås'")
       if (choice === 'föremål') {
-         alert ("Du valde att använda ditt föremål. Du fyller föremålet med glass och kastar på monstret")
+         alert ("Du valde att använda ditt föremål. Du fyller föremålet med glass och kastar det på monstret")
          enterGlade();
       } else if (choice === 'strössel') {
-         alert ("Du valde strössel, och glassmonstret halkar och du går vidare in i skogen...");
+         alert ("Du valde strössel, och glassmonstret halkar och du kan fortsätta din resa...");
          enterGlade();
          } else if (choice === 'kolasås') {
-            alert ("Du valde kolasås, och glassmonstret åkte nu kana ner för backen. Du går vidare in i skogen...");
+            alert ("Du valde kolasås, och glassmonstret fastnar i kolasås och du kan fortsätt in i skogen...");
             enterGlade();
             } else {
                alert ("Glassmonstret kastar vaniljglass på dig. Du får brainfreeze och får stå kvar i 10 sekunder")
-               alert ('10 9 8 7 6 5 4 3 2 1 "Du kan nu gå vidare"' )
+               alert ('10 9 8 7 6 5 4 3 2 1... "Du kan nu gå vidare"' )
                enterGlade();
             }
    
@@ -87,13 +88,7 @@ function enterGlade() {
         if (answer === '2') {
            alert ("Du hittade guldglassen!! Hurra!!")
            alert ("Nu när du hittat guldglassen - får du äta upp den")
-           const playAgain = prompt ('Vill du spela igen? Skriv "ja eller nej"');
-               if (playAgain === ja) {
-                  myGame();
-               } else if (answer === nej) {
-                  alert ("Spelet kommer nu att avslutas");
-                  
-               }
+           alert ("Spelet avslutas")
         } else {
            alert ("Åh nej, här var det tomt")
            first = false;
