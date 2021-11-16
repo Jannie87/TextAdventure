@@ -1,5 +1,5 @@
  window.onload;
-
+/** Globala variabler */
  const inventory = [];
  let first = true;
 
