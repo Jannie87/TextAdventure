@@ -19,20 +19,29 @@
  function myGame () { 
     const person = prompt ("Skriv in ditt namn");
     username = person;
+    alert("Hej " + username + ". Du är nu på väg in i ett glassigt äventyr där du skall hitta den magiska guldglassen.");
     startStory();
 
  }
 
  function startStory() {
-    alert("Hej " + username + ". Du är nu på väg in i ett glassigt äventyr där du skall hitta den magiska guldglassen.");
-    const answer = prompt
+    const answer = prompt ('Gå igenom dörren,  vill du gå till skogen eller huset? Skriv "skogen eller huset"')
 
-    const scopeOne= prompt ("Enter flavor for scope 1");
-    alert("you added " + scopeOne + " to your cone");
-   
+      if (answer === 'skogen') {
+         enterForest();
+      } else if (answer === 'huset') {
+         enterHouse();
+      } else {
+         alert ("Var god ange skogen eller huset");
+         startStory();
+      }
+        
+  }
+
+function enterForest () {
+   alert ("Du har nu kommit in i skogen och skall hitta den magiska guldglassen. Framför dig har du tre föremål 'bägare, rån, våffla'");
+   const answer = prompt ("Plocka upp det föremål du vill ta med dig 'bägare, rån, våffla', Skriv namnet på föremålet");
 }
-
-
 
     const scopeTwo= prompt ("Please enter another flavor");
     alert("now you added " + scopeOne + " and " + scopeTwo + " to your cone");
