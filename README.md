@@ -3,7 +3,7 @@ Klass: FED21G
 Ämne: Javascript Grund - Laboration 1
 
 
-Titel: IceCreamYouScream
+Titel: IceCreamYouScream (textAdventure)
 Beskrivning:    Detta är ett spel där man skall hitta en magisk guldglass.
                 Jag har valt att skriva uppgiften med prompt och alert.
                 Jag använder även if-satser i mina funktioner.
