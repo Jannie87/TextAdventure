@@ -27,7 +27,7 @@
     const answer = prompt ('Vill du börja ditt äventyr? Skriv "ja eller nej"')
 
       if (answer === 'ja') {
-         alert ("Du kommer nu att gå till en magisk skog")
+         alert ("Du kommer nu att gå till en frostig skog")
          enterForest();
       } else if (answer === 'nej') {
          alert ('Spelet avslutas');
@@ -63,14 +63,19 @@ function resumeGame() {
       if (choice === 'föremål') {
          alert ("Du valde att använda ditt föremål. Du fyller föremålet med glass och kastar det på monstret")
          enterGlade();
+
       } else if (choice === 'strössel') {
          alert ("Du valde strössel, och glassmonstret halkar och du kan fortsätta din resa...");
+         inventory.push(choice);
+         console.log(choice)
          enterGlade();
          } else if (choice === 'kolasås') {
             alert ("Du valde kolasås, och glassmonstret fastnar i kolasås och du kan fortsätt in i skogen...");
+            inventory.push(choice);
+            console.log(choice)
             enterGlade();
             } else {
-               alert ("Glassmonstret kastar vaniljglass på dig. Du får brainfreeze och får stå kvar i 10 sekunder")
+               alert ("Ahhh!!  Glassmonstret kastar vaniljglass på dig. Du får brainfreeze och får stå kvar i 10 sekunder")
                alert ('10 9 8 7 6 5 4 3 2 1... "Du kan nu gå vidare"' )
                enterGlade();
             }
