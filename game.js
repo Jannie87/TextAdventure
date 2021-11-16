@@ -39,7 +39,7 @@
          enterForest();
       } else if (answer === 'nej') {
          alert ('Spelet avslutas');
-         gameOver();
+        
          
       } else {
          alert ("Var god ange skogen eller huset");
@@ -84,12 +84,22 @@ function resumeGame() {
 function enterGlade() {
    alert ("Du har nu kommit in i en glänta och ser 3 bägare");
    const answer = prompt("Du får nu välja en bägare och se om den magiska guldglassen finns där i. 'Skriv 1, 2 eller 3 ");
-        
-    }
-
-function gameOver() {
-   alert ("Nu är spelet slut")
+        if (answer === '2') {
+           alert ("Du hittade guldglassen!! Hurra!!")
+           alert ("Nu när du hittat guldglassen - får du äta upp den")
+           const playAgain = prompt ('Vill du spela igen? Skriv "ja eller nej"')
+               if (playAgain === ja) {
+                  myGame();
+               } else {
+                  alert ("Tack för din medverkan, spelet kommer nu att avslutas")
+                  
+               }
+        } else {
+           alert ("Åh nej, här var det tomt")
+           enterGlade();
+        }
 }
+
 
 
 
