@@ -3,11 +3,16 @@
  const inventory = [];
  let first = true;
 
+ /**
+  * En funktion som ger en alert på att spelet är startat.
+  */
  function main () {
     alert ('IceCreamYouScream - Ett glassigt äventyr')
     myGame();
  }
-
+/**
+ * En funktion där man får ange sitt namn och får info om spelet.
+ */
  function myGame () { 
     const person = prompt ("Skriv in ditt namn");
     username = person;
@@ -15,7 +20,9 @@
     startStory();
 
  }
-
+/**
+ * En funktion som startat själva spelet, där användaren få olika va.
+ */
  function startStory() {
     const answer = prompt ('Vill du börja ditt äventyr och gå till skogen? Skriv "ja eller nej"')
 
@@ -31,7 +38,9 @@
       }
         
   }
-
+/**
+ * En funktion där användaren får göra ett val. Valet sparas sedan i en inventory.
+ */
 function enterForest () {
    alert ("Du har nu kommit in i skogen och skall hitta den magiska guldglassen. Framför dig har du tre föremål 'bägare, rån, våffla'");
    const answer = prompt ("Plocka upp det föremål du vill ta med dig 'bägare, rån, våffla', Skriv namnet på föremålet");
@@ -44,7 +53,9 @@ function enterForest () {
          enterForest();
       }
 }
-
+/**
+ * En funktion där användaren får göra ett val. 
+ */
 function resumeGame() {
    alert("Du fortsätter in i skogen. Då hör du plötsligt steg bakom dig. Du vänder dig om och ser ett glassmonster komma emot dig. Glassmonstret kastar vaniljglass på dig");
    const choice = prompt ("Du kan nu välja att använda ditt föremål och kasta glass på glassmonstret eller strö ut strössel eller kolasås, ' skriv in föremål, strössel eller kolasås'")
@@ -64,7 +75,10 @@ function resumeGame() {
             }
    
 } 
-
+/**
+ * En funktion som anropar en global variabel "first" detta för att se om det är första gången man fått alerten "Du har kommit in i en glänta och ser 3 bägare".
+ * Annars kommer man direkt till prompten där man får välja 1, 2 eller 3.
+ */
 function enterGlade() {
    if (first){
       alert ("Du har nu kommit in i en glänta och ser 3 bägare");
