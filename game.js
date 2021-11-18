@@ -31,11 +31,6 @@
          enterForest();
       } else if (answer === 'nej') {
          alert ('Spelet avslutas');
-        
-         
-      } else {
-         alert ("Var god ange skogen eller huset");
-         startStory();
       }
         
   }
@@ -43,7 +38,7 @@
  * En funktion där användaren får göra ett val. Valet sparas sedan i en inventory.
  */
 function enterForest () {
-   alert ("Du har nu kommit in i den magiska skogen. Nu är det upp till dig att hitta den magiska guldglassen. Du hittar tre föremål: en bägare, ett rån och en våffla");
+   alert ("Du har nu kommit in i den frostiga skogen. Nu är det upp till dig att hitta den magiska guldglassen. Du hittar tre föremål: en bägare, ett rån och en våffla");
    const answer = prompt ("Plocka upp ett utav föremålen som du vill ta med dig på din resa. 'Skriv: bägare, rån eller våffla'");
       if (answer === 'bägare' || answer === 'rån' || answer ==='våffla') {
          inventory.push(answer);
@@ -58,19 +53,20 @@ function enterForest () {
  * En funktion där användaren får göra ett val. 
  */
 function resumeGame() {
-   alert("Din resa fortsätter in i skogen. Plötsligt hör du ett prasslande ljud bakom dig. Du vänder dig om och ser ett glassmonster komma springandes emot dig. Glassmonstret kastar vaniljglass på dig");
-   const choice = prompt (" Vad gör du för att skydda dig? Du kan nu välja att använda ditt föremål och kasta glass på glassmonstret eller strö ut strössel eller kolasås, 'Skriv: föremål, strössel eller kolasås'")
+   alert("Din resa fortsätter in i skogen. Plötsligt hör du ett prasslande ljud bakom dig...")
+   alert ("Du vänder dig om och ser ett glassmonster komma springandes emot dig. Glassmonstret kastar vaniljglass på dig");
+   const choice = prompt (" Vad gör du för att skydda dig? Du kan nu välja att använda ditt föremål och kasta glass, strö ut strössel eller hälla ut kolasås, 'Skriv: föremål, strössel eller kolasås'")
       if (choice === 'föremål') {
-         alert ("Du valde att använda ditt föremål. Du fyller föremålet med glass och kastar det på monstret")
+         alert ("Du valde att använda ditt föremål. Du fyller föremålet med glass och kastar glassen på monstret")
          enterGlade();
 
       } else if (choice === 'strössel') {
-         alert ("Du valde strössel, och glassmonstret halkar och du kan fortsätta din resa...");
+         alert ("Du valde strössel, och glassmonstret halkar på strösslet och du kan fortsätta in i skogen..");
          inventory.push(choice);
          console.log(choice)
          enterGlade();
          } else if (choice === 'kolasås') {
-            alert ("Du valde kolasås, och glassmonstret fastnar i kolasås och du kan fortsätt in i skogen...");
+            alert ("Du valde kolasås, och glassmonstret fastnar i kolasåsen och du kan fortsätt in i skogen...");
             inventory.push(choice);
             console.log(choice)
             enterGlade();
@@ -92,7 +88,7 @@ function enterGlade() {
    const answer = prompt("Du får nu välja en bägare och se om den magiska guldglassen finns där i. 'Skriv 1, 2 eller 3 ");
         if (answer === '2') {
            alert ("Du hittade guldglassen!! Hurra!!")
-           alert ("Nu när du hittat guldglassen - får du äta upp den")
+           alert ("Varsågod å äta upp guldglassen!")
            alert ("Spelet avslutas")
         } else {
            alert ("Åh nej, här var det tomt")
