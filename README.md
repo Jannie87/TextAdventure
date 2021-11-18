@@ -13,6 +13,6 @@ Beskrivning:    Spelet heter IceCreamYouSceam.
                 Jag använder även if-satser i mina funktioner.
 
 GitHub Pages: 
-
+[DEMO] https://jannie87.github.io/TextAdventure/
 
 
