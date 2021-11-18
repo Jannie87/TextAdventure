@@ -13,7 +13,9 @@ header {
 h1 {
     text-shadow: 2px 1px violet;
 }
-
+p {
+    font-size: 1.5rem;
+}
 main {
     height: 80vh;
    
@@ -48,10 +50,10 @@ span {
     100% {color: greenyellow;}
 }
 
-footer {
+footer p {
     text-align: center;
     color: whitesmoke;
-    font-size: 0.5rem;
+    font-size: 1rem;
     height: 2rem
 }
 
