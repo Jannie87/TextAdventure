@@ -42,7 +42,6 @@ function enterForest () {
    const answer = prompt ("Plocka upp ett utav föremålen som du vill ta med dig på din resa. 'Skriv: bägare, rån eller våffla'");
       if (answer === 'bägare' || answer === 'rån' || answer ==='våffla') {
          inventory.push(answer);
-         console.log(answer);
          resumeGame ();
       } else {
          alert ("Vänligen välj ett utav föremålen");
@@ -68,7 +67,6 @@ function resumeGame() {
          } else if (choice === 'kolasås') {
             alert ("Du valde kolasås, och glassmonstret fastnar i kolasåsen och du kan fortsätt in i skogen...");
             inventory.push(choice);
-            console.log(choice)
             enterGlade();
             } else {
                alert ("Ahhh!!  Glassmonstret kastar vaniljglass på dig. Du får brainfreeze och får stå kvar i 10 sekunder")
