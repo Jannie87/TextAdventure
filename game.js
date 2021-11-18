@@ -1,4 +1,4 @@
- window.onload;
+ window.onload = main;
 /** Globala variabler */
  const inventory = [];
  let first = true;
@@ -6,14 +6,14 @@
  /**
   * En funktion som ger en alert på att spelet är startat.
   */
- function main () {
+ function main() {
     alert ('IceCreamYouScream - Ett glassigt äventyr')
     myGame();
  }
 /**
  * En funktion där man får ange sitt namn och får info om spelet.
  */
- function myGame () { 
+ function myGame() { 
     const person = prompt ("Skriv in ditt namn");
     username = person;
     alert("Hej " + username + ". Du är nu på väg in i ett glassigt äventyr där du skall hitta den magiska guldglassen.");
@@ -37,12 +37,12 @@
 /**
  * En funktion där användaren får göra ett val. Valet sparas sedan i en inventory.
  */
-function enterForest () {
+function enterForest() {
    alert ("Du har nu kommit in i den frostiga skogen. Nu är det upp till dig att hitta den magiska guldglassen. Du hittar tre föremål: en bägare, ett rån och en våffla");
    const answer = prompt ("Plocka upp ett utav föremålen som du vill ta med dig på din resa. 'Skriv: bägare, rån eller våffla'");
       if (answer === 'bägare' || answer === 'rån' || answer ==='våffla') {
          inventory.push(answer);
-         resumeGame ();
+         resumeGame();
       } else {
          alert ("Vänligen välj ett utav föremålen");
          enterForest();
