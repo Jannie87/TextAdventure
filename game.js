@@ -1,4 +1,4 @@
- window.onload = main;
+ window.onload;
 /** Globala variabler */
  const inventory = [];
  let first = true;
@@ -7,13 +7,14 @@
   * En funktion som ger en alert på att spelet är startat.
   */
  function main() {
-    alert ('IceCreamYouScream - Ett glassigt äventyr')
+    
     myGame();
  }
 /**
  * En funktion där man får ange sitt namn och får info om spelet.
  */
  function myGame() { 
+    alert ('IceCreamYouScream - Ett glassigt äventyr')
     const person = prompt ("Skriv in ditt namn");
     username = person;
     alert("Hej " + username + ". Du är nu på väg in i ett glassigt äventyr där du skall hitta den magiska guldglassen.");
